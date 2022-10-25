@@ -9,7 +9,11 @@ From / By https://github.com/umaar/export-github-stars
 ## Environment variables:
 
 ```java
+GITHUB_TOKEN=your token here
 
+# Any name for your new database
+
+DATABASE_NAME=output
 ```
 
 ## GitHub
@@ -83,4 +87,56 @@ make start
   "createRetryIntervalMillis": 100,
   "propagateCreateError": false // <- default is true, set to false
 },
+```
+
+## Was not able to do `npm install` so check for latest versions of dependancies
+
+````java
+ncu
+```
+
+
+```java
+ @octokit/rest                   ^18.0.9  →  ^19.0.5
+ body-parser                     ^1.19.0  →  ^1.20.1
+ config                           ^3.3.2  →   ^3.3.8
+ connect-session-knex             ^2.0.0  →   ^3.0.0
+ cookie-parser                    ~1.4.5  →   ~1.4.6
+ date-fns                        ^2.16.1  →  ^2.29.3
+ debug                            ^4.3.0  →   ^4.3.4
+ dotenv                           ^8.2.0  →  ^16.0.3
+ escape-goat                      ^3.0.0  →   ^4.0.0
+ express                         ^4.17.1  →  ^4.18.2
+ express-session                 ^1.17.1  →  ^1.17.3
+ forcedomain                      ^2.1.1  →  ^2.2.11
+ got                             ^11.8.0  →  ^12.5.2
+ knex                           ^0.21.12  →   ^2.3.0
+ nunjucks                         ^3.2.2  →   ^3.2.3
+ passport                         ^0.4.1  →   ^0.6.0
+ sqlite3                          ^5.0.0  →   ^5.1.2
+ uuid                             ^8.3.1  →   ^9.0.0
+ @umaar/personal-eslint-config    ^1.0.3  →   ^1.0.5
+ del                              ^6.0.0  →   ^7.0.0
+ gulp-replace                     ^1.0.0  →   ^1.1.3
+ gulp-rev-rewrite                 ^4.0.0  →   ^5.0.0
+ gulp-sass                        ^4.1.0  →   ^5.1.0
+ rollup                          ^2.33.3  →   ^3.2.3
+ vinyl-paths                      ^3.0.1  →   ^5.0.0
+ xo                              ^0.34.2  →  ^0.52.4
+
+Run ncu -u to upgrade package.json
+````
+
+## Seed the sqlite3 database
+
+```
+make migrate-db-dev
+```
+
+Output
+
+```
+./node_modules/.bin/knex migrate:latest --env development
+Using environment: development
+Batch 1 run: 3 migrations
 ```
