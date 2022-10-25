@@ -1,3 +1,29 @@
+# export-github-stars-sqlite-express-octokit
+
+# 🚀 A Node.js webapp to scrape the stars of specified GitHub users 🚀
+
+https://github.com/coding-to-music/export-github-stars-sqlite-express-octokit
+
+From / By https://github.com/umaar/export-github-stars
+
+## Environment variables:
+
+```java
+
+```
+
+## GitHub
+
+```java
+git init
+git add .
+git remote remove origin
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:coding-to-music/export-github-stars-sqlite-express-octokit.git
+git push -u origin main
+```
+
 ### GitHub Star Export
 
 [![Actions Status](https://github.com/umaar/export-github-stars/workflows/Node%20CI/badge.svg)](https://github.com/umaar/export-github-stars/actions)
@@ -11,7 +37,6 @@ This webapp queries the GitHub API to query for the stars of a GitHub user, and 
 This repo uses persistent queues, and supports resumable downloading of stars. You can fetch stars of many users.
 
 ![preview-jobs.png](preview-jobs.png)
-
 
 #### To run
 
@@ -45,7 +70,7 @@ make start
 - Cache users and their star counts
 - Use http://nvd3.org/ to visualise a users stars over time
 - For many stars, should I use something like this https://github.com/tbranyen/hyperlist
-- Configure pooling correctly: https://github.com/tgriesser/knex/issues/2820#issuecomment-481710112 e.g. 
+- Configure pooling correctly: https://github.com/tgriesser/knex/issues/2820#issuecomment-481710112 e.g.
 
 ```
 "pool": {

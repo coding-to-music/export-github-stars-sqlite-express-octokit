@@ -1,7 +1,12 @@
 {
-  "name": "export-github-stars",
+  "name": "export-github-stars-sqlite-express-octokit",
   "version": "0.0.0",
   "private": true,
+  "description": "A Node.js webapp to scrape the stars of specified GitHub users",
+  "scripts": {
+    "start": "set this here",
+    "deploy": "git add . && git commit -m Build && git push"
+  },
   "dependencies": {
     "@octokit/rest": "^18.0.9",
     "bcryptjs": "^2.4.3",
