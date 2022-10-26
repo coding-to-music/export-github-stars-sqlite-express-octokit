@@ -28,6 +28,13 @@ async function main() {
   //     // You can use await inside this function block
   //   })();
 
+  function defaultTask(cb) {
+    // place code for your default task here
+    cb();
+  }
+
+  exports.default = defaultTask;
+
   const { spawn: spawnRaw } = require("child_process");
 
   let hasRegisteredSIGINTHandler = false;
