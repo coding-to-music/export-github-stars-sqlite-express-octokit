@@ -28,13 +28,6 @@ async function main() {
   //     // You can use await inside this function block
   //   })();
 
-  function defaultTask(cb) {
-    // place code for your default task here
-    cb();
-  }
-
-  exports.default = defaultTask;
-
   const { spawn: spawnRaw } = require("child_process");
 
   let hasRegisteredSIGINTHandler = false;
@@ -290,6 +283,8 @@ async function main() {
 
   gulp.task("watch", gulp.parallel([watchFiles]));
 
+  gulp.task("default", gulp.parallel([watchFiles]));
+
   gulp.task(
     "default",
     gulp.series([
@@ -309,6 +304,12 @@ async function main() {
     gulp.series(["clean", "styles", "scripts", "images", "copy", "copy:vids"])
   );
 }
+// function defaultTask(cb) {
+//   // place code for your default task here
+//   cb();
+// }
+
+// exports.default = defaultTask;
 
 main().then(
   () => process.exit(0),
