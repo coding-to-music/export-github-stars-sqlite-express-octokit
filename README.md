@@ -91,10 +91,9 @@ make start
 
 ## Was not able to do `npm install` so check for latest versions of dependancies
 
-````java
+```java
 ncu
 ```
-
 
 ```java
  @octokit/rest                   ^18.0.9  →  ^19.0.5
@@ -125,7 +124,7 @@ ncu
  xo                              ^0.34.2  →  ^0.52.4
 
 Run ncu -u to upgrade package.json
-````
+```
 
 ## Seed the sqlite3 database
 
